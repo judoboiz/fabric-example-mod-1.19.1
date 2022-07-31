@@ -1,4 +1,9 @@
 {
   "item.tutorialmod.mum_ingot": "Mum Ingot",
-  "item.tutorialmod.nuget_ingot": "Nuget Ingot"
+  "item.tutorialmod.nuget_ingot": "Nuget Ingot",
+
+  "block.tutorialmod.mum_block": "Mum Block",
+  "block.tutorialmod.mum_ore": "Mum Ore",
+
+  "itemGroup.tutorialmod.mum": "Mum Tutorial Tab"
 }

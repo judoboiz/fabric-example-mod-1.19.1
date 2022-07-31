@@ -1,5 +1,6 @@
 package net.judoboiz.tutorialmod.item;
 
+import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.judoboiz.tutorialmod.TutorialMod;
 import net.minecraft.item.Item;
@@ -9,10 +10,10 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
     public static final Item mum_ingot = registerItem("mum_ingot",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
 
     public static final Item nuget_ingot = registerItem("nuget_ingot",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
     }
