@@ -9,12 +9,12 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-    public static final Item raw_mum = registerItem("raw_mum",
+    public static final Item RAW_MUM = registerItem("raw_mum",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
-    public static final Item mum_ingot = registerItem("mum_ingot",
+    public static final Item MUM_INGOT = registerItem("mum_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
 
-    public static final Item mum_nugget = registerItem("mum_nugget",
+    public static final Item MUM_NUGGET = registerItem("mum_nugget",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
