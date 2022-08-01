@@ -14,13 +14,22 @@ import net.judoboiz.tutorialmod.TutorialMod;
 
 public class ModBlock {
     public static final Block MUM_BLOCK = registerBlock("mum_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f)), ModItemGroup.MUM);
+            new Block(FabricBlockSettings.of(Material.METAL)
+                    .strength(6f, 6f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
 
     public static final Block MUM_ORE = registerBlock("mum_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(3f)), ModItemGroup.MUM);
+            new Block(FabricBlockSettings.of(Material.METAL)
+                    .strength(3f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
 
     public static final Block DEEPSLATE_MUM_ORE = registerBlock("deepslate_mum_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(3f)), ModItemGroup.MUM);
+            new Block(FabricBlockSettings.of(Material.METAL)
+                    .strength(3f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
