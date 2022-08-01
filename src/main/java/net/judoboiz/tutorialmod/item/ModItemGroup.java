@@ -9,5 +9,5 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
     public static final ItemGroup MUM = FabricItemGroupBuilder.build(new Identifier(TutorialMod.MOD_ID, "mum"),
-            () ->new ItemStack(ModItems.mum_ingot));
+            () ->new ItemStack(ModItems.MUM_INGOT));
 }
