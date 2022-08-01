@@ -9,6 +9,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+    public static final Item raw_mum = registerItem("raw_mum",
+            new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
     public static final Item mum_ingot = registerItem("mum_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
 
