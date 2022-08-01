@@ -17,7 +17,7 @@ public class ModBlock {
             new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool().dropsNothing()), ModItemGroup.MUM);
 
     public static final Block MUM_ORE = registerBlock("mum_ore",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(3f).requiresTool()), ModItemGroup.MUM);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(3f).breakInstantly().requiresTool()), ModItemGroup.MUM);
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
