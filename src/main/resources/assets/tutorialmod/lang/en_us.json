@@ -5,6 +5,8 @@
 
   "block.tutorialmod.mum_block": "Mum Block",
   "block.tutorialmod.mum_ore": "Mum Ore",
+  "block.tutorialmod.deepslate_mum_ore": "Deepslate Mum Ore",
+
 
   "itemGroup.tutorialmod.mum": "Mum Tutorial Tab"
 }

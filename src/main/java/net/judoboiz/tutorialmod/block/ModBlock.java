@@ -18,6 +18,9 @@ public class ModBlock {
 
     public static final Block MUM_ORE = registerBlock("mum_ore",
             new Block(FabricBlockSettings.of(Material.METAL).strength(3f)), ModItemGroup.MUM);
+
+    public static final Block DEEPSLATE_MUM_ORE = registerBlock("deepslate_mum_ore",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(3f)), ModItemGroup.MUM);
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
