@@ -4,7 +4,7 @@
   "experience": 0.7,
   "group": "copper_ingot",
   "ingredient": {
-    "item": "minecraft:copper_ore"
+    "item": "tutorialmod:mum_ore"
   },
-  "result": "minecraft:copper_ingot"
+  "result": "tutorialmod:mum_ingot"
 }
