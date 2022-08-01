@@ -12,7 +12,7 @@ public class ModItems {
     public static final Item mum_ingot = registerItem("mum_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
 
-    public static final Item nuget_ingot = registerItem("nuget_ingot",
+    public static final Item mum_nuget = registerItem("mum_nuget",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
