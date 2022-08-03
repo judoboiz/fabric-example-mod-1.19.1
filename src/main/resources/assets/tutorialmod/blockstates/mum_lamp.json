@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "lit=true": {"model":  "tutorialmod:block/mum_lamp_on"},
+    "lit=false": {"model":  "tutorialmod:block/mum_lamp_off"}
+
+  }
+}
