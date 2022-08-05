@@ -3,9 +3,11 @@ package net.judoboiz.tutorialmod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.judoboiz.tutorialmod.block.custom.JumpyBlock;
+import net.judoboiz.tutorialmod.block.custom.MumCropBlock;
 import net.judoboiz.tutorialmod.block.custom.MumLampBlock;
 import net.judoboiz.tutorialmod.item.ModItemGroup;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -33,15 +35,22 @@ public class ModBlock {
                     .requiresTool()
             ), ModItemGroup.MUM);
 
-    public static final Block MUM_LAMP= registerBlock("mum_lamp",
+    public static final Block MUM_LAMP = registerBlock("mum_lamp",
             new MumLampBlock(FabricBlockSettings.of(Material.GLASS)
                     .luminance(state ->state.get(MumLampBlock.LIT)? 15: 0)
             ), ModItemGroup.MUM);
+
+    public static final Block MUM_CROP = registerBlockWithOutItem("mum_crop",
+            new MumCropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)
+            ));
 
     public static final Block JUMPY_BLOCK = registerBlock("jumpy_block",
             new JumpyBlock(FabricBlockSettings.of(Material.STONE)
                     .strength(2f, 3f)
             ), ModItemGroup.MUM);
+    private static Block registerBlockWithOutItem(String name, Block block){
+        return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
+    }
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);

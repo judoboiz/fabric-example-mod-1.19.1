@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.judoboiz.tutorialmod.TutorialMod"
+    ],
+    "client": [
+      "net.judoboiz.tutorialmod.TutorialModClient"
     ]
   },
   "mixins": [

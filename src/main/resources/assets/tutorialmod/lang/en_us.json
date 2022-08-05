@@ -4,12 +4,15 @@
   "item.tutorialmod.raw_mum": "Raw Mum",
   "item.tutorialmod.eight_ball": "Eight Ball",
   "item.tutorialmod.finder_stick": "Finder Stick",
+  "item.tutorialmod.mum_fruit": "Mum Fruit",
+  "item.tutorialmod.mum_seeds": "Mum Seeds",
 
   "block.tutorialmod.mum_block": "Mum Block",
   "block.tutorialmod.mum_ore": "Mum Ore",
   "block.tutorialmod.deepslate_mum_ore": "Deepslate Mum Ore",
   "block.tutorialmod.jumpy_block": "Jumpy Block",
   "block.tutorialmod.mum_lamp": "Mum Lamp",
+  "block.tutorialmod.mum_crop": "Mum Crop",
 
 
   "itemGroup.tutorialmod.mum": "Mum Tutorial Tab"
