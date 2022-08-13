@@ -1,52 +1,56 @@
 package net.judoboiz.tutorialmod.item.custom;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-
-import java.util.List;
-
 
 public class FinderStickItem extends Item {
     public FinderStickItem(Settings settings) {
         super(settings);
     }
 
+
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        if(!context.getWorld().isClient
-                && context.getHand() == Hand.MAIN_HAND
-                && !context.getPlayer().isCreative()
-                && !context.getPlayer().isSpectator()){
+        if(context.getWorld().isClient()) {
+            BlockPos positionClicked = context.getBlockPos();
+            PlayerEntity player = context.getPlayer();
+            boolean foundBlock = false;
 
-            context.getPlayer().damage(DamageSource.GENERIC, 2140000000);
-            context.getPlayer().getItemCooldownManager().set(this, 20);
+            for(int i = 0; i <= positionClicked.getY() + 64; i++) {
+                Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
 
+                if(isValuableBlock(blockBelow)) {
+                    outputValuableCoordinates(positionClicked.down(i), player, blockBelow);
+                    foundBlock = true;
+                    break;
+                }
+            }
+
+            if(!foundBlock) {
+                player.sendMessage(Text.literal("No valuables"), false);
+            }
         }
+
+        context.getStack().damage(1, context.getPlayer(),
+                (player) -> player.sendToolBreakStatus(player.getActiveHand()));
 
         return super.useOnBlock(context);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack,World world, List<Text> tooltip, TooltipContext context) {
-        if (Screen.hasShiftDown()){
-            tooltip.add(Text.literal("Click block with item to revile a secret"+ "\n" +"You need to be in survival").formatted(Formatting.YELLOW));
 
-        }else {
-            tooltip.add(Text.literal("Press shift for more info").formatted(Formatting.YELLOW));
-        }
+    private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow) {
+        player.sendMessage(Text.literal("Found " + blockBelow.asItem().getName().getString() + " at " +
+                "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), false);
+    }
 
-        super.appendTooltip(stack, world, tooltip, context);
-
-        super.appendTooltip(stack, world, tooltip, context);
+    private boolean isValuableBlock(Block block) {
+        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE
+                || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
     }
 }

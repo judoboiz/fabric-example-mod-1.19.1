@@ -6,14 +6,24 @@
   "item.tutorialmod.finder_stick": "Finder Stick",
   "item.tutorialmod.mum_fruit": "Mum Fruit",
   "item.tutorialmod.mum_seeds": "Mum Seeds",
+  "item.tutorialmod.mum_super_fuel": "Mum Super Fuel",
+  "item.tutorialmod.grape": "Grape",
 
   "block.tutorialmod.mum_block": "Mum Block",
   "block.tutorialmod.mum_ore": "Mum Ore",
+  "block.tutorialmod.netherrack_mum_ore": "Netherrack Mum Ore",
+  "block.tutorialmod.end_mum_ore": "End Mum Ore",
   "block.tutorialmod.deepslate_mum_ore": "Deepslate Mum Ore",
   "block.tutorialmod.jumpy_block": "Jumpy Block",
   "block.tutorialmod.mum_lamp": "Mum Lamp",
   "block.tutorialmod.mum_crop": "Mum Crop",
+  "block.tutorialmod.mum_button": "Mum Button",
+  "block.tutorialmod.mum_pressure_plate": "Mum Pressure Plate",
+  "block.tutorialmod.mum_fence": "Mum Fence",
+  "block.tutorialmod.mum_wall": "Mum Wall",
+  "block.tutorialmod.mum_fence_gate": "Mum Fence Gate",
 
+  "itemGroup.tutorialmod.mum": "Mum Tutorial Tab",
 
-  "itemGroup.tutorialmod.mum": "Mum Tutorial Tab"
+  "entity.minecraft.villager.jumpmaster": "Jump Master"
 }

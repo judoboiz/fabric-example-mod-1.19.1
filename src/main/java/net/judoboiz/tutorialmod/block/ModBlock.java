@@ -2,13 +2,9 @@ package net.judoboiz.tutorialmod.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.judoboiz.tutorialmod.block.custom.JumpyBlock;
-import net.judoboiz.tutorialmod.block.custom.MumCropBlock;
-import net.judoboiz.tutorialmod.block.custom.MumLampBlock;
+import net.judoboiz.tutorialmod.block.custom.*;
 import net.judoboiz.tutorialmod.item.ModItemGroup;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -24,6 +20,17 @@ public class ModBlock {
             ), ModItemGroup.MUM);
 
     public static final Block MUM_ORE = registerBlock("mum_ore",
+            new Block(FabricBlockSettings.of(Material.METAL)
+                    .strength(3f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+    public static final Block NETHERRACK_MUM_ORE = registerBlock("netherrack_mum_ore",
+            new Block(FabricBlockSettings.of(Material.METAL)
+                    .strength(3f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+
+    public static final Block ENDSTONE_MUM_ORE = registerBlock("end_mum_ore",
             new Block(FabricBlockSettings.of(Material.METAL)
                     .strength(3f)
                     .requiresTool()
@@ -48,6 +55,38 @@ public class ModBlock {
             new JumpyBlock(FabricBlockSettings.of(Material.STONE)
                     .strength(2f, 3f)
             ), ModItemGroup.MUM);
+
+    public static final Block MUM_BUTTON= registerBlock("mum_button",
+            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4f)
+                    .requiresTool()
+                    .noCollision()
+            ), ModItemGroup.MUM);
+
+    public static final Block MUM_PRESSURE_PLATE= registerBlock("mum_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING ,FabricBlockSettings.of(Material.METAL)
+                    .strength(4f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+
+    public static final Block MUM_FENCE = registerBlock("mum_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+
+    public static final Block MUM_FENCE_GATE= registerBlock("mum_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+
+    public static final Block MUM_WALL= registerBlock("mum_wall",
+            new WallBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4f)
+                    .requiresTool()
+            ), ModItemGroup.MUM);
+
     private static Block registerBlockWithOutItem(String name, Block block){
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);
     }

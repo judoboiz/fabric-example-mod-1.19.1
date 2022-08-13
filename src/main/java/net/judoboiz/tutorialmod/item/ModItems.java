@@ -30,7 +30,13 @@ public class ModItems {
                     food(new FoodComponent.Builder().hunger(4).saturationModifier(4f).build())));
 
     public static final Item FINDER_STICK = registerItem("finder_stick",
-            new FinderStickItem(new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1)));
+            new FinderStickItem(new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1).maxDamage(14)));
+
+    public static final Item MUS_SUPER_FUEL = registerItem("mum_super_fuel",
+            new Item(new FabricItemSettings().group(ModItemGroup.MUM)));
+
+    public static final Item GRAPE = registerItem("grape",
+            new Item(new FabricItemSettings().group(ModItemGroup.MUM).food(ModFoodComponents.GRAPE)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
