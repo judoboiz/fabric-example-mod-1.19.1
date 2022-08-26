@@ -3,6 +3,7 @@ package net.judoboiz.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 import net.judoboiz.tutorialmod.block.ModBlock;
 import net.judoboiz.tutorialmod.item.ModItems;
+import net.judoboiz.tutorialmod.networking.ModMessages;
 import net.judoboiz.tutorialmod.painting.ModPainting;
 import net.judoboiz.tutorialmod.util.ModLootTableModifiers;
 import net.judoboiz.tutorialmod.util.ModRegistries;
@@ -30,5 +31,7 @@ public class TutorialMod implements ModInitializer {
 		ModLootTableModifiers.modifyLootTables();
 
 		ModOreGeneration.generateOres();
+
+		ModMessages.registerC2SPackets();
 	}
 }
