@@ -24,6 +24,7 @@ public class KeyInputHandler {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (drinking_key.wasPressed()){
                 // ClientPlayNetworking.send(ModMessages.EXAMPLE_ID, PacketByteBufs.create());
+                ClientPlayNetworking.send(ModMessages.DRINKING_ID, PacketByteBufs.create());
             }
         });
     }

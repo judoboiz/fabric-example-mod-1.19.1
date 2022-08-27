@@ -27,5 +27,8 @@
 
   "entity.minecraft.villager.jumpmaster": "Jump Master",
   "key.tutorialmod.drink_water": "Drink Water Key",
-  "key.category.tutorialmod.tutorial": "Tutorial Mod Keys"
+  "key.category.tutorialmod.tutorial": "Tutorial Mod Keys",
+
+  "message.tutorialmod.drank_water": "Drunk Water!",
+  "message.tutorialmod.no_water" : "No Water Around!"
 }
