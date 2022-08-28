@@ -39,5 +39,7 @@
   "key.category.tutorialmod.tutorial": "Tutorial Mod Keys",
 
   "message.tutorialmod.drank_water": "Drunk Water!",
-  "message.tutorialmod.no_water" : "No Water Around!"
+  "message.tutorialmod.no_water" : "No Water Around!",
+
+  "item.tutorialmod.soap_water_bucket": "Soap Water Bucket"
 }

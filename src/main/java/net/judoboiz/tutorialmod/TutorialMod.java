@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.judoboiz.tutorialmod.block.ModBlock;
 import net.judoboiz.tutorialmod.event.PlayerTickHandler;
+import net.judoboiz.tutorialmod.fluid.ModFluids;
 import net.judoboiz.tutorialmod.item.ModItems;
 import net.judoboiz.tutorialmod.networking.ModMessages;
 import net.judoboiz.tutorialmod.painting.ModPainting;
@@ -35,6 +36,8 @@ public class TutorialMod implements ModInitializer {
 		ModOreGeneration.generateOres();
 
 		ModMessages.registerC2SPackets();
+
+		ModFluids.register();
 
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
 	}
