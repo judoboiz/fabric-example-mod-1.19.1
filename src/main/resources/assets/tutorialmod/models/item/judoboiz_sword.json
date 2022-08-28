@@ -1,0 +1,103 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "tutorialmod:item/judoboiz_sword/handle",
+		"1": "tutorialmod:item/judoboiz_sword/blade",
+		"2": "tutorialmod:item/judoboiz_sword/blade1",
+		"3": "tutorialmod:item/judoboiz_sword/blade2",
+		"4": "tutorialmod:item/judoboiz_sword/texture",
+		"particle": "tutorialmod:item/judoboiz_sword/handle"
+	},
+	"elements": [
+		{
+			"from": [7.25, 0, 7],
+			"to": [8, 6, 9],
+			"faces": {
+				"north": {"uv": [4, 0, 5, 6], "texture": "#4"},
+				"east": {"uv": [0, 0, 2, 6], "texture": "#4"},
+				"south": {"uv": [5, 0, 6, 6], "texture": "#4"},
+				"west": {"uv": [2, 0, 4, 6], "texture": "#4"},
+				"up": {"uv": [1, 8, 0, 6], "texture": "#4"},
+				"down": {"uv": [7, 0, 6, 2], "texture": "#4"}
+			}
+		},
+		{
+			"from": [7.25, 7, 7],
+			"to": [8, 16, 9],
+			"faces": {
+				"north": {"uv": [4, 0, 5, 9], "texture": "#1"},
+				"east": {"uv": [0, 0, 2, 9], "texture": "#1"},
+				"south": {"uv": [5, 0, 6, 9], "texture": "#1"},
+				"west": {"uv": [2, 0, 4, 9], "texture": "#1"},
+				"up": {"uv": [7, 2, 6, 0], "texture": "#1"},
+				"down": {"uv": [7, 2, 6, 4], "texture": "#1"}
+			}
+		},
+		{
+			"from": [7.4, 16, 7.25],
+			"to": [7.85, 18, 8.75],
+			"faces": {
+				"north": {"uv": [2, 0, 3, 2], "texture": "#2"},
+				"east": {"uv": [0, 0, 2, 2], "texture": "#2"},
+				"south": {"uv": [2, 2, 3, 4], "texture": "#2"},
+				"west": {"uv": [0, 2, 2, 4], "texture": "#2"},
+				"up": {"uv": [4, 2, 3, 0], "texture": "#2"},
+				"down": {"uv": [4, 2, 3, 4], "texture": "#2"}
+			}
+		},
+		{
+			"from": [7.5, 18, 7.5],
+			"to": [7.75, 19.75, 8.5],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 2], "texture": "#3"},
+				"east": {"uv": [1, 0, 2, 2], "texture": "#3"},
+				"south": {"uv": [0, 2, 1, 4], "texture": "#3"},
+				"west": {"uv": [2, 0, 3, 2], "texture": "#3"},
+				"up": {"uv": [2, 3, 1, 2], "texture": "#3"},
+				"down": {"uv": [3, 2, 2, 3], "texture": "#3"}
+			}
+		},
+		{
+			"from": [6.75, 6, 4],
+			"to": [8.5, 7, 12],
+			"faces": {
+				"north": {"uv": [4, 2, 6, 3], "texture": "#0"},
+				"east": {"uv": [4, 0, 12, 1], "texture": "#0"},
+				"south": {"uv": [4, 3, 6, 4], "texture": "#0"},
+				"west": {"uv": [4, 1, 12, 2], "texture": "#0"},
+				"up": {"uv": [2, 8, 0, 0], "texture": "#0"},
+				"down": {"uv": [4, 0, 2, 8], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0.25, 2.75, 0]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 2.75, 0]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 2.5, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 2.25, 0]
+		},
+		"ground": {
+			"rotation": [-82.42, 18.96, -21.56],
+			"translation": [0, -3.25, 0]
+		},
+		"gui": {
+			"rotation": [0, -48.75, 0]
+		},
+		"head": {
+			"rotation": [-34.75, 0, 0],
+			"translation": [0.25, 7.5, -7]
+		},
+		"fixed": {
+			"rotation": [0, -86.25, 0],
+			"translation": [0, -1.5, 0],
+			"scale": [1, 0.87891, 1]
+		}
+	}
+}

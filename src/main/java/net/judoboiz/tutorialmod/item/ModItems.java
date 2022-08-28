@@ -6,7 +6,6 @@ import net.judoboiz.tutorialmod.block.ModBlock;
 import net.judoboiz.tutorialmod.item.custom.EightBallItem;
 import net.judoboiz.tutorialmod.item.custom.FinderStickItem;
 import net.judoboiz.tutorialmod.item.armor.ModArmorMaterials;
-import net.judoboiz.tutorialmod.item.tools.ModToolMaterials;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -23,6 +22,10 @@ public class ModItems {
 
     public static final Item EIGHT_BALL = registerItem("eight_ball",
             new EightBallItem(new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1)));
+
+    public static final Item JUDOBOIZ_SWORD = registerItem("judoboiz_sword",
+            new SwordItem(ToolMaterials.DIAMOND, 10  ,5f ,
+                    new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1)));
 
     public static final Item MUM_SEEDS = registerItem("mum_seeds",
             new AliasedBlockItem(ModBlock.MUM_CROP,
