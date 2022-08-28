@@ -35,6 +35,9 @@ public class DrinkingC2SPacket {
 
             player.sendMessage(Text.literal("Thirst" + ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
                     .fillStyle(Style.EMPTY.withColor(Formatting.AQUA)), false);
+
+
+            ThirstData.syncThirst(((IEntityDataSaver) player).getPersistentData().getInt("thirst"), player);
         }else {
             player.sendMessage(Text.translatable(MESSAGE_NOT_WATER_NEARBY).fillStyle(Style.EMPTY.withColor(Formatting.RED)), false);
 
