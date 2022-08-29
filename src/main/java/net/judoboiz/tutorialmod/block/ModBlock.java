@@ -86,6 +86,11 @@ public class ModBlock {
                     .strength(4f)
                     .requiresTool()
             ), ModItemGroup.MUM);
+    public static final Block GEM_INFUSING_STATION = registerBlock("gem_infusing_station",
+            new GemInfusingStationBlock(FabricBlockSettings.of(Material.STONE)
+                    .strength(2f, 3f).nonOpaque()
+            ), ModItemGroup.MUM);
+
 
     private static Block registerBlockWithOutItem(String name, Block block){
         return Registry.register(Registry.BLOCK, new Identifier(TutorialMod.MOD_ID, name), block);

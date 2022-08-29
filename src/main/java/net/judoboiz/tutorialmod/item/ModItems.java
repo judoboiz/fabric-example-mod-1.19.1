@@ -5,8 +5,6 @@ import net.judoboiz.tutorialmod.TutorialMod;
 import net.judoboiz.tutorialmod.block.ModBlock;
 import net.judoboiz.tutorialmod.item.custom.EightBallItem;
 import net.judoboiz.tutorialmod.item.custom.FinderStickItem;
-import net.judoboiz.tutorialmod.item.armor.ModArmorMaterials;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -44,21 +42,6 @@ public class ModItems {
     public static final Item GRAPE = registerItem("grape",
             new Item(new FabricItemSettings().group(ModItemGroup.MUM).food(ModFoodComponents.GRAPE)));
 
-    public static final Item MUM_HELMET = registerItem("mum_helmet",
-            new ArmorItem(ModArmorMaterials.MUM, EquipmentSlot.HEAD,
-                    new FabricItemSettings().group(ModItemGroup.MUM)));
-
-    public static final Item MUM_CHESTPLATE = registerItem("mum_chestplate",
-            new ArmorItem(ModArmorMaterials.MUM, EquipmentSlot.CHEST,
-                    new FabricItemSettings().group(ModItemGroup.MUM)));
-
-    public static final Item MUM_LEGGINGS = registerItem("mum_leggings",
-            new ArmorItem(ModArmorMaterials.MUM, EquipmentSlot.LEGS,
-                    new FabricItemSettings().group(ModItemGroup.MUM)));
-
-    public static final Item MUM_BOOTS = registerItem("mum_boots",
-            new ArmorItem(ModArmorMaterials.MUM, EquipmentSlot.FEET,
-                    new FabricItemSettings().group(ModItemGroup.MUM)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registry.ITEM, new Identifier(TutorialMod.MOD_ID, name), item);
