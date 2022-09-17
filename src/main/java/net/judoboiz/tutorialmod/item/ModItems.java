@@ -22,7 +22,7 @@ public class ModItems {
             new EightBallItem(new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1)));
 
     public static final Item JUDOBOIZ_SWORD = registerItem("judoboiz_sword",
-            new SwordItem(ToolMaterials.DIAMOND, 10  ,5f ,
+            new SwordItem(ToolMaterials.DIAMOND, 1000  ,53f ,
                     new FabricItemSettings().group(ModItemGroup.MUM).maxCount(1)));
 
     public static final Item MUM_SEEDS = registerItem("mum_seeds",
